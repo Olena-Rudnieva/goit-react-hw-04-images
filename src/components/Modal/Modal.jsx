@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { Overlay, ModalPicture } from './Modal.styled';
 
 export const Modal = ({ closeModal, bigPicture }) => {
@@ -21,4 +22,9 @@ export const Modal = ({ closeModal, bigPicture }) => {
       </ModalPicture>
     </Overlay>
   );
+};
+
+Modal.propTypes = {
+  closeModal: PropTypes.func.isRequired,
+  bigPicture: PropTypes.string.isRequired,
 };

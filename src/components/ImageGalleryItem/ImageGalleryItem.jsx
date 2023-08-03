@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Modal } from '../Modal/Modal';
 import { GalleryItem, GalleryItemPicture } from './ImageGalleryItem.styled';
 
@@ -19,4 +20,9 @@ export const ImageGalleryItem = ({ smallPicture, bigPicture }) => {
       {isOpen && <Modal bigPicture={bigPicture} closeModal={closePicture} />}
     </GalleryItem>
   );
+};
+
+ImageGalleryItem.propTypes = {
+  smallPicture: PropTypes.string.isRequired,
+  bigPicture: PropTypes.string.isRequired,
 };
